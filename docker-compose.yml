@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   CleanArchExample.webapi:
-    container_name: ambev_developer_evaluation_webapi
+    container_name: clean_arch_example_evaluation_webapi
     image: ${DOCKER_REGISTRY-}ambevdeveloperevaluationwebapi
     build:
       context: .
@@ -19,7 +19,7 @@ services:
       - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
 
   CleanArchExample.database:
-    container_name: ambev_developer_evaluation_database
+    container_name: clean_arch_example_evaluation_database
     image: postgres:13
 
     environment:
@@ -31,7 +31,7 @@ services:
     restart: unless-stopped
 
   CleanArchExample.nosql:
-    container_name: ambev_developer_evaluation_nosql 
+    container_name: clean_arch_example_evaluation_nosql 
     image: mongo:8.0    
     environment:
         MONGO_INITDB_ROOT_USERNAME: developer
@@ -40,7 +40,7 @@ services:
       - "27017"
 
   CleanArchExample.cache:
-    container_name: ambev_developer_evaluation_cache 
+    container_name: clean_arch_example_evaluation_cache 
     image: redis:7.4.1-alpine     
     command: redis-server --requirepass ev@luAt10n
     environment:
