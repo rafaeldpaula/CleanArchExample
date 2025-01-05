@@ -3,7 +3,7 @@ version: '3.8'
 services:
   CleanArchExample.webapi:
     container_name: clean_arch_example_evaluation_webapi
-    image: ${DOCKER_REGISTRY-}ambevdeveloperevaluationwebapi
+    image: ${DOCKER_REGISTRY-}cleanarchexamplewebapi
     build:
       context: .
       dockerfile: src/CleanArchExample.WebApi/Dockerfile
